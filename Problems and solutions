@@ -1,0 +1,35 @@
+📝 How to Use
+Place your image files (.png, .jpg, etc.) in a known directory.
+
+Run the script:
+python gifmaker.py
+Follow the prompts to:
+
+Enter the number of images.
+
+Provide full paths or filenames for each image.
+Specify the name of the output GIF file (e.g., team.gif).
+📂 Sample Input
+rust
+Copy
+Edit
+Enter the number of images: 2
+Enter the file location for image 1(do not include quotes): team-pic1.png
+Enter the file location for image 2(do not include quotes): team-pic2.png
+Enter the file location for the output GIF (e.g., 'team.gif'): team.gif
+🐞 Troubleshooting Steps
+While developing this tool, I encountered and solved the following issues:
+
+1. ModuleNotFoundError: No module named 'imageio'
+✅ Solution: Installed the module via pip:
+pip install imageio
+2. FileNotFoundError: The directory does not exist
+❌ Input: "C:\Users\KIIT\code\projects C:\Users\KIIT\code\team-pic2.png"
+
+✅ Solution: Removed accidental spaces in the input path.
+
+3. FileNotFoundError: No such file: 'C:\Users\KIIT\code\projects\team-pic1.png'
+❌ Input: Only the filename without path when the script wasn't in the same directory.
+
+✅ Solution: Either run the script in the same folder as the images or give the full path to each image.
+
