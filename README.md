@@ -4,7 +4,7 @@ This is a simple command-line Python tool that allows you to convert multiple im
 
 ---
 
-## 👩‍💻 Author
+## 👨‍💻 Author
 
 **Laksha Mandiye**
 
