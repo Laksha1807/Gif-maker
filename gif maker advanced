@@ -1,0 +1,19 @@
+import imageio.v3 as iio
+
+# Get user input for image file locations
+filenames = []
+num_images = int(input("Enter the number of images: "))
+
+for i in range(num_images):
+    filename = input(f"Enter the file location for image {i + 1}: ")
+    filenames.append(filename)
+
+# Get user input for the output GIF file location
+output_gif = input("Enter the file location for the output GIF (e.g., 'team.gif'): ")
+
+images = []
+
+for filename in filenames:
+    images.append(iio.imread(filename))
+
+iio.imwrite(output_gif, images, duration=500, loop=0)
